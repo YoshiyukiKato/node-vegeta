@@ -1,8 +1,8 @@
 {
-  "name": "node_vegeta",
+  "name": "tarble",
   "version": "0.1.0",
   "main": "dist/index.js",
-  "types" : "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc --build tsconfig.json",
     "test": "$(npm bin)/nyc $(npm bin)/mocha --timeout 600000 test/**/*.test.ts",
