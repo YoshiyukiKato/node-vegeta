@@ -2,7 +2,7 @@
 Tarble is a younger brother of Vegeta. Exec [vegeta](https://github.com/tsenart/vegeta) commands from nodejs.
 
 ## vegeta?
-[vegeta](https://github.com/tsenart/vegeta) is an awesome load testing tool made developed in Go. `tarble` is a wrapper to exec `vegeta` command from node.js. You have to install `vegeta` appropriately before use `tarble`.
+[vegeta](https://github.com/tsenart/vegeta) is an awesome load testing tool developed in Go. `tarble` is a wrapper to exec `vegeta` command from node.js. You have to install `vegeta` appropriately before use `tarble`.
 
 ## usage
 ### prerequisite
