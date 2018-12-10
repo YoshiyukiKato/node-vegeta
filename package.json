@@ -1,12 +1,20 @@
 {
   "name": "node-vegeta",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
+  "main": "dist/index.js",
+  "types" : "dist/index.d.ts",
   "scripts": {
     "build": "tsc --build tsconfig.json",
     "test": "$(npm bin)/nyc $(npm bin)/mocha --timeout 600000 test/**/*.test.ts",
     "publish": "npm run build && npm publish"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YoshiyukiKato/node-vegeta.git"
+  },
+  "author": "Yoshiyuki Kato",
+  "license": "MIT",
   "dependencies": {
     "change-case": "^3.0.2"
   },
