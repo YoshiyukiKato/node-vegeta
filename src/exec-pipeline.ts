@@ -1,6 +1,7 @@
 import {exec} from "child_process";
+import { Stream } from "stream";
 
-export async function execAsync(command: string): Promise<{ stdout:string, stderr: string }> {
+function execAsync(command: string): Promise<{ stdout:string, stderr: string }> {
   return new Promise<{ stdout:string, stderr: string }>((resolve, reject) => {
     exec(command, (err, stdout, stderr) => {
       if(err){
@@ -10,6 +11,11 @@ export async function execAsync(command: string): Promise<{ stdout:string, stder
     });
   });
 }
+
+/**
+ * TO BE DEVELOPED
+function execStream(): Stream{}
+ */
 
 export class ExecPipeline {
   private commands: string[] = [];
@@ -30,4 +36,9 @@ export class ExecPipeline {
   public async exec(): Promise<{stdout:string, stderr: string}>{
     return await execAsync(this.pipe());
   }
+
+  /**
+   * TO BE DEVELOPED
+  public execStream(): Stream {}
+   */
 }
