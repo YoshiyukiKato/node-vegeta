@@ -2,7 +2,7 @@
 Exec [vegeta](https://github.com/tsenart/vegeta) from nodejs.
 
 ## vegeta?
-[vegeta](https://github.com/tsenart/vegeta) is awesome load testing tool made by Go. `node-vegeta` is a wrapper to exec `vegeta` command from node.js. You have to install `vegeta` appropriately before use `node-vegeta`.
+[vegeta](https://github.com/tsenart/vegeta) is awesome load testing tool made developed in Go. `node-vegeta` is a wrapper to exec `vegeta` command from node.js. You have to install `vegeta` appropriately before use `node-vegeta`.
 
 ## usage
 ### prerequisite
