@@ -35,3 +35,5 @@ const {stdout, stderr} = await vegeta
   .exec();
 ```
 
+### API doc
+API doc is available on [here](https://yoshiyukikato.github.io/tarble/).

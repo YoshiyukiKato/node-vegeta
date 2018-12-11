@@ -18,7 +18,7 @@ export class ExecPipeline {
     return this.commands.join(" | ");
   }
   
-  public add(command:string): ExecPipeline{
+  protected add(command:string): ExecPipeline{
     this.commands.push(command);
     return this;
   }

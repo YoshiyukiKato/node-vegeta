@@ -5,9 +5,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc --build tsconfig.json",
+    "build": "$(npm bin)/tsc --build tsconfig.json",
+    "doc": "$(npm bin)/typedoc --out doc src",
     "test": "$(npm bin)/nyc $(npm bin)/mocha --timeout 600000 test/**/*.test.ts",
-    "release": "npm run build && npm publish"
+    "release": "npm run build && npm doc && npm publish"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
     "power-assert": "^1.6.1",
+    "typedoc": "^0.13.0",
     "typescript": "^3.2.1"
   },
   "nyc": {
