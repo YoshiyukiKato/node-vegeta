@@ -6,9 +6,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "$(npm bin)/tsc --build tsconfig.json",
-    "doc": "$(npm bin)/typedoc --out doc src",
+    "docs": "$(npm bin)/typedoc --out docs src",
     "test": "$(npm bin)/nyc $(npm bin)/mocha --timeout 600000 test/**/*.test.ts",
-    "release": "npm run build && npm doc && npm publish"
+    "release": "npm run build && npm run docs && npm publish"
   },
   "repository": {
     "type": "git",
