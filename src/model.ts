@@ -55,7 +55,7 @@ export interface IVegetaPlotOptions {
 }
 
 export interface IVegetaReportOptions {
-  every?: number;
+  every?: string;
   output?: string;
   type?: string;
 }

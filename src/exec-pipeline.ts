@@ -1,5 +1,5 @@
-import {exec} from "child_process";
-import { Stream } from "stream";
+import { exec, spawn, ChildProcess, ExecException } from "child_process";
+import { Stream, Writable } from "stream";
 
 function execAsync(command: string): Promise<{ stdout:string, stderr: string }> {
   return new Promise<{ stdout:string, stderr: string }>((resolve, reject) => {
@@ -11,11 +11,6 @@ function execAsync(command: string): Promise<{ stdout:string, stderr: string }> 
     });
   });
 }
-
-/**
- * TO BE DEVELOPED
-function execStream(): Stream{}
- */
 
 export class ExecPipeline {
   private commands: string[] = [];
@@ -37,8 +32,11 @@ export class ExecPipeline {
     return await execAsync(this.pipe());
   }
 
-  /**
-   * TO BE DEVELOPED
-  public execStream(): Stream {}
-   */
+  public execStream(outStream: Writable, errStream: Writable,
+      callback?: (err: ExecException|null, stdout: string, stderr: string) => void) {
+    const subprocess = exec(this.pipe(), callback);
+    subprocess.stdout.pipe(outStream);
+    subprocess.stderr.pipe(errStream);
+    return subprocess;
+  }
 }
